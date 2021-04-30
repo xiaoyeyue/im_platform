@@ -1,7 +1,7 @@
 package wb.im.core.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+//import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,6 @@ import wb.im.core.service.IWbMessageService;
 import wb.im.core.vo.MessageInfoVo;
 import wb.im.core.vo.MessageVo;
 import wb.im.core.vo.UserSimpleVo;
-import wb.im.domain.mapper.account.WbMessageInfoMapper;
 import wb.im.domain.model.account.WbMessageInfo;
 
 import javax.annotation.PostConstruct;
@@ -35,10 +34,6 @@ public class WbLoginTokenService implements IWbMessageService {
 
     @Resource
     private WbMessageAdapter wbMessageAdapter;
-
-    @Resource
-    WbMessageInfoMapper wbMessageInfoMapper;
-
 
     @Value("${im.token.key:}")
     private String aesKey;

@@ -31,9 +31,6 @@ public class WbMessageService implements IWbMessageService {
     WbMessageAdapter wbMessageAdapter;
 
     @Resource
-    WbMessageInfoMapper wbMessageInfoMapper;
-
-    @Resource
     ChannelCache channelCache;
 
     @Value("${im.token.key:}")
